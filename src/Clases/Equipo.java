@@ -1,6 +1,6 @@
 package Clases;
 
-public class Equipo {
+public class Equipo { //define un equipo con nombre y descripción
     // Atributos
     private String nombre;
     private String descripcion;

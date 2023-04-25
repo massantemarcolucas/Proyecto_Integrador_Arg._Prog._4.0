@@ -1,6 +1,6 @@
 package Clases;
 
-public class Jugador {
+public class Jugador { //define al jugador con un ID único
     private String nombre;
     private int IDJugador;
 

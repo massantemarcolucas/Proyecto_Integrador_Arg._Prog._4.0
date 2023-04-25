@@ -1,7 +1,7 @@
 package Clases;
 
-public class Ronda {
-    private int numeroDeRonda;
+public class Ronda { // Creo que está mal, debería tomar varios partidos que pertenecen a la 1ra ronda, los ganadores...
+    private int numeroDeRonda; // ... deberían ir a una 2da ronda. Después semifinales y la final.
     private Partido partido;
 
     public Ronda(int numeroDeRonda, Partido partido) {
@@ -9,7 +9,7 @@ public class Ronda {
         Partido Partido = partido;
 
     }
-    int numeroRonda = 1;
+    int numeroRonda = 1; //la ronda toma un partido y lo ejecuta, luego suma 1 a numeroRonda
     public Object ronda (Partido){
         while (numeroRonda<=4){
             numeroRonda+=1;

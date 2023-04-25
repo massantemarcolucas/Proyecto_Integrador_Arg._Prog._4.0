@@ -3,6 +3,7 @@ import Clases.Jugador;
 
 public class Main {
     public static void main(String[] args) {
+        // Los equipos deberian estar en un array de equipos
         Equipo equipo1 = new Equipo("Argentina", "Selección argentina");
         Equipo equipo2 = new Equipo("Brazil", "Selección brasilera");
         Equipo equipo3 = new Equipo("Uruguay", "Selección uruguaya");

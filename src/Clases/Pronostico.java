@@ -4,13 +4,13 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Pronostico<equipoSeleccionado> {
-    private Jugador IDjugador;
-    private Partido partido;
+    private Jugador IDjugador; //Jugador "tal"
+    private Partido partido; // A que partido hace referencia
 
-    private int puntaje;
+    private int puntaje; // cuantos puntos sumó
     String equipoSeleccionado = "";
-    public void SeleccionarEquipo (equipoSeleccionado){
-        String EquipoA = String.valueOf(Partido.getEquipoA());
+    public void SeleccionarEquipo (equipoSeleccionado){ //selección de equipo según el partido (2 equipos disponibles).
+        String EquipoA = String.valueOf(Partido.getEquipoA()); // Los equipos los toma de la clase partido.
         String EquipoB = String.valueOf(Partido.getEquipoB());
         System.out.println("Ronda " + Ronda.getNumeroDeRonda() + "\n Equipo A: " + EquipoA +
                 "\n Equipo B: " + EquipoB + "\n Quien cree que ganará, A o B?");
@@ -35,9 +35,9 @@ public class Pronostico<equipoSeleccionado> {
     public int hashCode() {
         return Objects.hash(getEquipoSeleccionado());
     }
-    public void puntos (Partido.resultado){
-        puntaje = 0;
-        Equipo ganador;
+    public void puntos (Partido.resultado){ //Según si gana pierde o empata el equipo elegido por el jugador
+        puntaje = 0;                        // suma 3, 1 o 0 puntos a su puntaje
+        Equipo ganador;                     // esto lo toma de la función resultado de la clase partido
         if (equipoSeleccionado() == Partido.resultado(ganador){
             puntaje += 3;
         }

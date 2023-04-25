@@ -3,12 +3,12 @@ package Clases;
 import java.util.Objects;
 
 public class Partido {
-    public static Object resultado;
+    public static Object resultado; // define cual equipo ganó
     private int golesEquipoA;
     private int golesEquipoB;
-    static Equipo equipoA;
-    static Equipo equipoB;
-
+    static Equipo equipoA; // tiene que tomar uno de los equipos instanciados de la clase Equipo y descontarlo del array
+    static Equipo equipoB; // tiene que tomar otro de los equipos instanciados de la clase Equipo y descontarlo del array
+                            // El equipo que gana debería ir a un array nuevo
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -20,7 +20,7 @@ public class Partido {
     public int hashCode() {
         return Objects.hash(getGolesEquipoA(), getGolesEquipoB());
     }
-    String ganador = "";
+    String ganador = ""; // Según la diferencia de goles gana el equipo a o b o empatan
     public static Object resultado(Equipo ganador){
         if (golesEquipoA > golesEquipoB){
             ganador = equipoA.getNombre();
